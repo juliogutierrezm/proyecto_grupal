@@ -12,6 +12,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', userRoutes);
  
 
-app.listen(process.env.PORT || 8000, () => {
-  console.log("Server started at port 8000")
+app.listen(process.env.PORT || 8080, () => {
+  console.log("Server started at port 8080")
 });

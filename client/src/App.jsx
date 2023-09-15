@@ -1,6 +1,6 @@
+import React from "react";
 import { useSelector } from "react-redux";
-import { Route, Routes } from "react-router-dom";
-
+import { Routes, Route} from "react-router-dom";
 import { Searchbar, Sidebar, MusicPlayer, TopPlay } from "./components";
 import {
   ArtistDetails,
@@ -10,6 +10,9 @@ import {
   SongDetails,
   TopCharts,
 } from "./pages";
+
+import Register from "./components/Register";
+import Login from "./components/Login";
 
 const App = () => {
   const { activeSong } = useSelector((state) => state.player);
@@ -29,6 +32,8 @@ const App = () => {
               <Route path="/artists/:id" element={<ArtistDetails />} />
               <Route path="/songs/:songid/:id" element={<SongDetails />} />
               <Route path="/search/:searchTerm" element={<Search />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/login" element={<Login />} />
             </Routes>
           </div>
           <div className="xl:sticky relative top-0 h-fit">

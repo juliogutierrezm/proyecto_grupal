@@ -22,16 +22,17 @@ const TopCharts = () => {
       </h2>
 
       <div className="flex flex-wrap sm:justify-start justify-center gap-8">
-        {data.data.map((song, i) => (
-          <SongCard
-            key={song.key}
-            song={song}
-            isPlaying={isPlaying}
-            activeSong={activeSong}
-            data={{ data: [...data.data] }}
-            i={i}
-          />
-        ))}
+      {data.data.map((song, i) => (
+        <SongCard
+          key={song.id} // Utilizar una propiedad única como 'id'
+          song={song}
+          isPlaying={isPlaying}
+          activeSong={activeSong}
+          data={{ data: [...data.data] }}
+          i={i}
+        />
+      ))}
+      
       </div>
     </div>
   );

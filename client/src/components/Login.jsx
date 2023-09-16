@@ -22,7 +22,6 @@ export default function Login() {
         correo,
         contraseña,
       };
-
       try {
         const response = await axios.post(
           baseUrl + "/login",

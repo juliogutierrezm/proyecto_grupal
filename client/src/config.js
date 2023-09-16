@@ -3,9 +3,9 @@ const environments = {
     production: "/api",
   };
 
-  const baseUrl = environments[process.env.NODE_ENV] || "";
+  const baseUrl = environments[import.meta.env.MODE] || "";
 
-  console.log(process.env.NODE_ENV)
+  console.log(import.meta.env.MODE)
   console.log(baseUrl)
 
   export { baseUrl };

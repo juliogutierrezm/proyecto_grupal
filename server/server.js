@@ -6,7 +6,7 @@ require("../server/config/mongoose.config");
 const userRoutes = require('./routes/userRoutes'); 
 require('dotenv').config();
 
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors());
 app.use(express.json()); // This is new
 app.use(express.urlencoded({ extended: true })); 
 app.use('/', userRoutes);

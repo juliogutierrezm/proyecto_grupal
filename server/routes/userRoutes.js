@@ -4,8 +4,8 @@ const verifyToken = require("../middlewares/verifyToken");
 const controllers = require('../controllers');
 
 // Define las rutas y asigna los controladores
-router.get("/user", verifyToken, controllers.getUserById);
-router.post("/register", controllers.register);
-router.post("/login", controllers.login);
+router.get("/api/user", verifyToken, controllers.getUserById);
+router.post("/api/register", controllers.register);
+router.post("/api/login", controllers.login);
 
 module.exports = router;
